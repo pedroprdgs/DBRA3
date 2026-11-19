@@ -1,0 +1,429 @@
+:root {
+    --azul: #176b87;
+    --azul-escuro: #124b63;
+    --fundo: #f3f6f8;
+    --texto: #263746;
+    --muted: #718096;
+    --borda: #e2e8ee;
+    --branco: #fff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--fundo);
+    color: var(--texto);
+}
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+aside {
+    width: 235px;
+    background: var(--azul-escuro);
+    color: white;
+    padding: 26px 17px;
+    flex-shrink: 0;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 0 12px 5px;
+}
+
+.sublogo {
+    color: #c4dce5;
+    font-size: 11px;
+    padding: 0 12px 30px;
+}
+
+.menu-titulo {
+    color: #a9c9d5;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    padding: 10px 12px;
+}
+
+nav a {
+    display: block;
+    padding: 12px;
+    margin: 4px 0;
+    border-radius: 7px;
+    color: #e8f2f5;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a.ativo,
+nav a:hover {
+    background: #247995;
+    color: white;
+}
+
+main {
+    flex: 1;
+    min-width: 0;
+}
+
+header {
+    height: 72px;
+    background: white;
+    border-bottom: 1px solid var(--borda);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 34px;
+}
+
+header strong {
+    font-size: 15px;
+}
+
+.usuario {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.conteudo {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 32px 34px;
+}
+
+.titulo {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 25px;
+}
+
+h1 {
+    margin: 0 0 7px;
+    font-size: 25px;
+}
+
+.descricao {
+    color: var(--muted);
+    font-size: 14px;
+    margin: 0;
+}
+
+.botao {
+    display: inline-block;
+    border: 0;
+    border-radius: 6px;
+    padding: 11px 16px;
+    background: var(--azul);
+    color: white;
+    font-weight: 600;
+    font-size: 13px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 17px;
+    margin-bottom: 27px;
+}
+
+.card {
+    background: white;
+    border: 1px solid var(--borda);
+    border-radius: 9px;
+    padding: 20px;
+}
+
+.card-label {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.card-numero {
+    font-size: 29px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.card-detalhe {
+    color: var(--muted);
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+.painel {
+    background: white;
+    border: 1px solid var(--borda);
+    border-radius: 9px;
+    margin-bottom: 24px;
+    overflow: hidden;
+}
+
+.painel-cabecalho {
+    padding: 19px 21px;
+    border-bottom: 1px solid var(--borda);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+h2 {
+    font-size: 16px;
+    margin: 0;
+}
+
+.painel-corpo {
+    padding: 21px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 17px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.campo.largo {
+    grid-column: 1 / -1;
+}
+
+label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #485968;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    border: 1px solid #d7e0e7;
+    border-radius: 5px;
+    padding: 11px 12px;
+    font: inherit;
+    font-size: 13px;
+    color: var(--texto);
+    background: white;
+}
+
+textarea {
+    min-height: 82px;
+    resize: vertical;
+}
+
+.acoes {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 19px;
+}
+
+.botao-secundario {
+    display: inline-block;
+    padding: 10px 15px;
+    border: 1px solid #d7e0e7;
+    border-radius: 6px;
+    background: white;
+    color: #536575;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.filtros {
+    display: flex;
+    gap: 10px;
+}
+
+.filtros input {
+    max-width: 230px;
+}
+
+.filtros select {
+    max-width: 160px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th {
+    background: #f8fafb;
+    color: #687987;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+}
+
+th,
+td {
+    padding: 14px 18px;
+    border-bottom: 1px solid #edf1f4;
+    font-size: 12px;
+}
+
+td {
+    color: #40515f;
+}
+
+tr:last-child td {
+    border-bottom: 0;
+}
+
+.codigo {
+    color: var(--azul);
+    font-weight: 700;
+}
+
+.status {
+    display: inline-block;
+    border-radius: 20px;
+    padding: 5px 9px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.pendente {
+    color: #946200;
+    background: #fff3cd;
+}
+
+.andamento {
+    color: #17618a;
+    background: #e1f2fb;
+}
+
+.concluida {
+    color: #24734a;
+    background: #e1f4e9;
+}
+
+.rodape {
+    text-align: center;
+    color: #94a1ab;
+    font-size: 11px;
+    padding: 12px;
+}
+
+.alerta-sucesso {
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    background: #dcfce7;
+    color: #166534;
+    border: 1px solid #86efac;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+@media (max-width: 900px) {
+    aside {
+        width: 190px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .conteudo {
+        padding: 25px 20px;
+    }
+
+    header {
+        padding: 0 20px;
+    }
+
+    .tabela-wrap {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 700px;
+    }
+}
+
+@media (max-width: 600px) {
+    .layout {
+        display: block;
+    }
+
+    aside {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .sublogo,
+    .menu-titulo {
+        display: none;
+    }
+
+    .logo {
+        padding: 0 5px 12px;
+    }
+
+    nav {
+        display: flex;
+        gap: 5px;
+        overflow-x: auto;
+    }
+
+    nav a {
+        white-space: nowrap;
+        padding: 9px;
+        font-size: 12px;
+    }
+
+    header {
+        height: 55px;
+    }
+
+    .titulo {
+        flex-direction: column;
+    }
+
+    .cards {
+        gap: 10px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .card-numero {
+        font-size: 24px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .campo.largo {
+        grid-column: auto;
+    }
+
+    .filtros {
+        flex-direction: column;
+    }
+
+    .filtros input,
+    .filtros select {
+        max-width: none;
+    }
+}
